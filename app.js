@@ -10,7 +10,6 @@ const server = http.createServer((req, res) => {
     user: req.headers['user-agent'],
     ip: req.headers['x-forwarded-for']
   }
-  // res.end(JSON.stringify(req.headers['x-forwarded-for'] || req.connection.remoteAddress));
   res.end(JSON.stringify(obj));
 });
 
