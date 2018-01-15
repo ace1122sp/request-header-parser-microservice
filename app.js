@@ -1,16 +1,13 @@
 const http = require('http');
 const hostname = 'localhost';
 const port = 9000;
+const getUser = require('./controller');
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');
-  const obj = {
-    lang: req.headers['accept-language'],
-    user: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for']
-  }
-  res.end(JSON.stringify(obj));
+  const user = getUser(req, res);
+  res.end(JSON.stringify(user));
 });
 
 server.listen(port, hostname => {
