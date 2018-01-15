@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,5 @@
   "bugs": {
     "url": "https://github.com/ace1122sp/request-header-parser-microservice/issues"
   },
-  "homepage": "https://github.com/ace1122sp/request-header-parser-microservice#readme"
+  "homepage": "https://topaz-whale.glitch.me/"
 }
