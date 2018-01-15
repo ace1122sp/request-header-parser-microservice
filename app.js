@@ -7,6 +7,9 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');
   const user = getUser(req, res);
+  console.log(user.operatingSystem);
+  console.log(typeof user.operatingSystem);
+  console.log(user);
   res.end(JSON.stringify(user));
 });
 
